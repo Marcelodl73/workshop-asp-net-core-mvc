@@ -41,9 +41,9 @@ namespace SalesWebMVC.Services
                 _context.Seller.Remove(obj);
                 await _context.SaveChangesAsync();
             }
-            catch(DbUpdateException e)
+            catch(DbUpdateException)
             {
-                throw new IntegrityException(e.Message);
+                throw new IntegrityException("Vendedor não pode ser excluído porque tem vendas vinculados a ele!");
             }
         }
 

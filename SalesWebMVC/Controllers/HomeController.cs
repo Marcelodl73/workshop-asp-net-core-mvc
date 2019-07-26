@@ -17,7 +17,7 @@ namespace SalesWebMVC.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Sua aplicação Web de vendas com arquitetura MVC.";
+            ViewData["Message"] = "Aplicação Web de vendas com arquitetura MVC.";
             ViewData["Dev"] = "Marcelo da Luz";
 
             return View();
@@ -25,7 +25,7 @@ namespace SalesWebMVC.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Dados do contato";
 
             return View();
         }

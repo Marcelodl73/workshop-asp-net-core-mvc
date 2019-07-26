@@ -20,20 +20,6 @@ namespace SalesWebMVC.Services
         {
             return await _context.Department.OrderBy(x => x.Name).ToListAsync();
         }
-
-        //tratamento delete
-        public async Task RemoveAsync(int id)
-        {
-            try
-            {
-                var obj = await _context.Department.FindAsync(id);
-                _context.Department.Remove(obj);
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException e)
-            {
-                throw new IntegrityException(e.Message);
-            }
-        }
+  
     }
 }

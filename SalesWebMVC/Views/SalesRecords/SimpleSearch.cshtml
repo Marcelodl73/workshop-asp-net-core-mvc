@@ -32,48 +32,57 @@
             <thead>
                 <tr class="success">
                     <th>
-                        @Html.DisplayNameFor(model => model.Id)
+                        <!--@Html.DisplayNameFor(model => model.Id)-->
+                        ID
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Date)
+                        <!--@Html.DisplayNameFor(model => model.Date)-->
+                        Data
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Seller)
+                        <!--@Html.DisplayNameFor(model => model.Seller)-->
+                        Vendedor
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Seller.Department)
+                        <!--@Html.DisplayNameFor(model => model.Seller.Department)-->
+                        Departamento
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Amount)
+                        <!--@Html.DisplayNameFor(model => model.Amount)-->
+                        Valor da venda
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Status)
+                        <!--@Html.DisplayNameFor(model => model.Status)-->
+                        Status
                     </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Date)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Seller.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Amount)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Status)
-                    </td>
-                </tr>
-                }
-            </tbody>
-        </table>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Seller.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Seller.Department.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
